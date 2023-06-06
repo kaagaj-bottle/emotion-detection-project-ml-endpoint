@@ -30,6 +30,9 @@ def predict():
     #conver the image into pixel data array
     pixel_image_input=np.array(grayscale_image)
 
+    #rescaling the image so that pixel values are between 0 and 1
+    pixel_image_input=pixel_image_input/255.
+
     #reshape the image
     reshaped_image_input=np.expand_dims(pixel_image_input,axis=0)
 
